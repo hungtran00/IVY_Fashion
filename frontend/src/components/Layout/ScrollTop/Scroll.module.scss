@@ -1,0 +1,22 @@
+.Scroll {
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+
+    &__top {
+        font-size: 4.2rem;    
+        padding: 8px;
+        color: white;
+        background-color: blue;
+        cursor: pointer;
+        transform: scale(0.8);
+        scroll-behavior: smooth;
+        &:hover {
+            transform: scale(0.9);
+        }
+        
+        }
+}
+.scroll {
+    transition: all 6s;
+}

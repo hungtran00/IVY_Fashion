@@ -1,0 +1,83 @@
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+      width: 120rem;
+      margin-top: 80px;
+    }
+    &__title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+      color: black;
+    }
+
+    &__form {
+      padding         : 8rem 4rem;
+      border-radius   : 1rem;
+      width           : 100%;
+      top             : 0;
+      left            : 0;
+      min-height      : 45rem;
+      background-color: white;
+      box-shadow      : 0 1px 15px rgb(0 0 0 / 12%);
+      animation       : showForm 0.3s ease 1; 
+    }
+    &__service {
+      display: flex;
+      justify-content: space-between;
+
+      &>span {
+        font-size: 1.3rem;
+        margin-top: 20px;
+      }
+
+      &_group {
+        display: block;
+
+        &>p {
+          font-size: 1.4rem;
+          color: red;
+        }
+      }
+    }
+    &__group {
+      display    : flex;
+      align-items: center;
+      padding    : 2rem 0;
+
+      &>label {
+          font-size   : 1.6rem;
+          margin-right: 1rem;
+          min-width: 100px;
+      }
+
+      &>input {
+          padding      : 0 2rem;
+          height       : 4rem;
+          flex         : 1;
+          border-radius: 1rem;
+          outline-color: var(--primary-color);
+      }
+
+    }
+    &__button {
+      cursor: pointer;
+      border: none;
+      align-self: center;
+      margin: 1.5rem 0;
+      font-size: 1.5rem;
+      padding: 10px 20px;
+      border-radius: 21px;
+      color: white;
+      background-color: rgb(223, 176, 62);
+
+    }
+    &__active {
+      color: red;
+    }
+  }
+  

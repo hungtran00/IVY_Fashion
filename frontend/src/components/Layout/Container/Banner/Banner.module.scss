@@ -1,0 +1,118 @@
+.bannertop {
+    position         : relative;
+    
+
+    &__img {
+        max-width: 1350px;
+        height: 600px;
+        margin: 0px auto 0;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        border-bottom-right-radius: 100px;
+        border-top-left-radius: 100px;
+        
+        
+    }
+    
+    &__item {
+       
+        transition: all;
+        img {
+         
+        }
+        
+        
+    }
+    &__container {
+        position      : relative;
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+    }
+
+    &__title {
+        font-size  : 6rem;
+        font-weight: 600;
+        color      : var(--white-color);
+    }
+
+    &__content {
+        font-size : 2.5rem;
+        margin-top: 50px;
+        color     : var(--white-color);
+    }
+
+    &__button {
+        color        : var(--black-color);
+        border-radius: 50px;
+        border       : none;
+        width        : 157px;
+        height       : 45px;
+        margin-top   : 20px;
+        font-size    : 2rem;
+        cursor       : pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    .btnLeft {
+        position: absolute;
+        top: 40%;
+        left: 100px;
+        font-size: 4rem;
+        font-weight: bold;
+        color: black;
+        display: flex;
+        align-items: center;
+        opacity: 0.6;
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+            transition: all 3s;
+        }
+    }
+    .btnRight {
+        position: absolute;
+        top: 40%;
+        right: 100px;
+        font-size: 4rem;
+        font-weight: bold;
+        color: black;
+        align-items: center;
+        display: flex;
+
+        opacity: 0.6;
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+            transition: all 3s;
+        }
+    }
+    &__list {
+        // position: absolute;
+        // bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        &_item {
+            border-radius: 67px;
+            width: 6px;
+            height: 6px;
+            padding: 7px;
+            background-color: black;
+            margin: 15px 5px;
+            cursor: pointer;
+            opacity: 0.8;
+
+            &_red {
+                color: red;
+            }
+            &_black {
+                color: black;
+            }
+        }
+    }
+}
