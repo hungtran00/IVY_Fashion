@@ -11,6 +11,7 @@ const Login = () => {
     const [username,setUsername] = useState("")
     const [password,setPassword] = useState("")
     const [message, setMessage] = useState("")
+    // const account = useSelector((state) => state.account)
     const nameRegex = /^[a-zA-Z0-9\-]+$/;
     const passRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{6,}$/;
     const dispatch = useDispatch();

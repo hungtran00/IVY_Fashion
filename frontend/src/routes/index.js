@@ -20,6 +20,7 @@ import Style from "../pages/LifeStyle/Style";
 import Blogs from "../pages/LifeStyle/Blogs"
 import ReturnPolicy from "../components/Layout/Footer/ReturnPolicy";
 import Register from "../pages/Register/Register";
+import CartItem from "../pages/CartItem/CartItem";
 
 const publicRoutes = [
     {
@@ -61,6 +62,9 @@ const publicRoutes = [
     },
     {
         path: '/cart', component: Cart
+    },
+    {
+        path: '/cart/item', component: CartItem
     },
     {
         path: '/policy', component: Policy

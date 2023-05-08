@@ -17,8 +17,8 @@ function Banner() {
     const images = [
         "https://pubcdn.ivymoda.com/files/news/2023/04/11/55836306652720d955e42831d0577809.jpg",
         "https://pubcdn.ivymoda.com/files/news/2023/03/06/dd8cd9fb84343609f1dfb9a5a7c96609.jpg",
-        "https://pubcdn.ivymoda.com/files/news/2023/03/06/63de1b697d785a9f15c3bef27024e165.jpg",
-        "https://pubcdn.ivymoda.com/files/news/2023/03/02/0df19551f0ae0598381bce05ea115d8a.jpg",
+        "https://pubcdn.ivymoda.com/files/news/2023/04/18/4859e07eab26c0374c8c75212095403a.jpg",
+        "https://pubcdn.ivymoda.com/files/news/2023/05/05/278b717f58730b0535d4c154856a28cd.jpg",
         "https://pubcdn.ivymoda.com/files/news/2023/04/18/4859e07eab26c0374c8c75212095403a.jpg"
         
     ]

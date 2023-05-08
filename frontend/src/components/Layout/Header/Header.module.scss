@@ -10,7 +10,7 @@
     top            : 0;
     /* required */
     z-index        : 999;
-    opacity        : 0.8;
+    opacity        : 1;
     justify-content: space-between;
     align-items    : center;
     padding        : 0 2rem;
@@ -46,6 +46,24 @@
     &__title:hover {
         color: var(--primary-color);
     }
+    &__search {
+        position: absolute;
+        top: 110%;
+        width: 100%;
+        background-color: #fff;
+        box-shadow      : 0 1px 15px rgb(0 0 0 / 12%);
+
+        &_item {
+            display:  block;
+            padding: 14px;
+            font-size: 1.3rem;
+            &:hover {
+                cursor: pointer;
+                background-color: #f2f2f2;
+            }
+        }
+
+    }
 
     &__icon {
         display     : flex;
@@ -74,6 +92,54 @@
             display: none;
         }
 
+    }
+    &__input {
+        position: relative;
+        font-size: 1.3rem;
+        margin-top: 12px;
+        &:hover .header__input_item {
+            display: block;
+            // transition: all 3s;
+            // z-index: 100;
+        }
+        &>span {
+            font-size: 1.3rem;
+            margin-top: 12px;
+            cursor: pointer;
+            
+        }
+
+        
+        &_item {
+            position: absolute;
+            width: 100%;
+            top: 130%;
+            background-color: #fff;
+            box-shadow      : 0 1px 15px rgb(0 0 0 / 12%);
+            display: none;
+            z-index: 100;
+            animation: linear 3s;
+
+           ::after {
+                content: "";
+                position: absolute;
+                top: -15px;
+                width: 100%;
+                height: 14px;
+                left: 0;
+           }
+        }
+        &_link {
+            font-size: 1.1rem;
+            padding: 9px 7px;
+            color: black;
+            list-style-type: none;
+
+            &:hover {
+                background-color: #f6f6f6;
+                // color: white;
+            }
+        }
     }
 
     &__icon>span {

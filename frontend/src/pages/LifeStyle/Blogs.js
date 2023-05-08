@@ -8,7 +8,7 @@ const Trend = () => {
     return (
         <div className={cx('life')}>
                 <div className={cx('life__container')}>
-                    <p>Trang chủ - Tin tức</p>
+                    <p>Trang chủ - Blog</p>
                     <div className={cx('life__container_content')}>
                         <h1>LIFESTYLE</h1>
                         <ul className={cx('life__container_content_list')}>

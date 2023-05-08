@@ -99,6 +99,7 @@ function Header() {
             >
               <span>LIFESTYLE</span>
             </NavLink>
+            
           </ul>
         </div>
         <div className={cx("header__title")}>
@@ -113,11 +114,11 @@ function Header() {
               placeholder="Tìm kiếm sản phẩm"
               ref={inputRef}
             />
-                <div style={{position:"absolute",top:"100%",width:"100%",backgroundColor:"white", opacity: "1"}} className={cx("header_popupSearch")}>
+                <div className={cx("header__search")}>
                     <div style={{width:"100%"}}>
                         {datas.map(item=>(
                          <div style={{width:"100%"}}>
-                          <Link onClick={()=> {inputRef.current.value = ''; setDatas([])}} style={{display:"block",padding:"10px"}} to={`/shop/${item._id}`}> {item.name}</Link>
+                          <Link className={cx('header__search_item')} onClick={()=> {inputRef.current.value = ''; setDatas([])}} to={`/shop/${item._id}`}> {item.name}</Link>
                          </div>
                         ))}
                     </div>
@@ -135,8 +136,16 @@ function Header() {
           </span>
           {user ? (
             <>
-              <p>
-                hi ,<span>{user.username}</span>
+              <p className={cx('header__input')}>
+                Hi ,<span>{user.username}</span>
+                <div className={cx('header__input_item')}>
+                  <NavLink to='/cart/item'>
+                    <li className={cx('header__input_link')}>Đơn hàng của tôi</li>
+                  </NavLink>
+                  <NavLink to='/register'>
+                    <li className={cx('header__input_link')}>Đăng xuất</li>
+                  </NavLink>
+                </div>
               </p>
             </>
           ) : (
@@ -227,9 +236,7 @@ function Header() {
         </div>
         <div className={cx("menu__container")}>
           <div className={cx("menu__icon")}>
-            <span>
-              <FontAwesomeIcon icon={faLocationDot} />
-            </span>
+            
             <span>
               <NavLink
                 className={({ isActive }) =>
@@ -241,10 +248,10 @@ function Header() {
               </NavLink>
             </span>
             <span>
-              <FontAwesomeIcon icon={faEnvelope} />
+              {/* <FontAwesomeIcon icon={faEnvelope} /> */}
             </span>
             <span>
-              <FontAwesomeIcon icon={faHeart} />
+              {/* <FontAwesomeIcon icon={faHeart} /> */}
             </span>
           </div>
 
