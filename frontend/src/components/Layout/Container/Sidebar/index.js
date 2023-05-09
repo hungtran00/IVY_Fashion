@@ -146,7 +146,6 @@ function Sidebar(props) {
         </div>
         <div className={cx('sidebar__size')}>
             <div className={cx('size__title')}>Products size</div>
-
             <div className={cx('size__content')} >
                 {
                     size.map((item) => {

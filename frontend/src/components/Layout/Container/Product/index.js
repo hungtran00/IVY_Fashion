@@ -3,7 +3,7 @@ import classNames from 'classnames/bind'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { getProduct } from '../../../../reducers/product/productSlice'
 import Loading from '../../../../pages/Loading'
 import { Link } from 'react-router-dom'
@@ -13,6 +13,7 @@ import { addToCart } from '../../../../reducers/cart/cartSlice'
 
 const cx = classNames.bind(styles)
 function Product() {
+    const [heart,setHeart] = useState('')
     const dispatch = useDispatch()
     const product = useSelector((state) => state.product)
     useEffect(() => {
@@ -45,8 +46,8 @@ function Product() {
                                             <span>{item.name}</span>
                                             <span>${item.price}.00</span>
                                             <button onClick={() => handleAddToCart(item)}>ADD TO CART</button>
-                                            <div className={cx('product__icon')}>
-                                                <FontAwesomeIcon icon={faHeart} />
+                                            <div className={cx('product__icon')} style={{color: heart === index ? 'red' : 'black'}}>
+                                                <FontAwesomeIcon icon={faHeart} onClick={()=> setHeart(index)}/>
                                             </div>
                                         </div>
                                     </div>

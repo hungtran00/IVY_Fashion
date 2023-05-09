@@ -140,6 +140,22 @@
                 // color: white;
             }
         }
+        &_button {
+            font-size: 1.1rem;
+            padding: 9px 7px;
+            color: black;
+            border: none;
+            outline: none;
+            list-style-type: none;
+            background-color: transparent;
+            cursor: pointer;
+            width: 100%;
+
+            &:hover {
+                background-color: #f6f6f6;
+                // color: white;
+            }
+        }
     }
 
     &__icon>span {

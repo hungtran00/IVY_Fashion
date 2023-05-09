@@ -25,7 +25,6 @@ function Header() {
   const [selectCart, setSelectCart] = useState(false);
   const [selectMenu, setSelectMenu] = useState(false);
   const [datas, setDatas] = useState([]);
-  // const [user,setUser] = useState("hungtran")
   const user = useSelector((state) => state.auth.login.currenUser);
   let activeStyle = {
     color: "var(--primary-color)",
@@ -42,6 +41,7 @@ function Header() {
   const handleClear = (item) => {
     dispatch(deleteToCart(item));
   };
+  
   const inputRef = useRef(null)
   const timeOutSet = useRef(null);
   const handleInput = async (value) => {
@@ -122,6 +122,7 @@ function Header() {
                          </div>
                         ))}
                     </div>
+                    
                 </div>
           </div>
           <span>
@@ -143,7 +144,7 @@ function Header() {
                     <li className={cx('header__input_link')}>Đơn hàng của tôi</li>
                   </NavLink>
                   <NavLink to='/register'>
-                    <li className={cx('header__input_link')}>Đăng xuất</li>
+                    <button onClick="window.location.reload()" className={cx('header__input_button')}>Đăng xuất</button>
                   </NavLink>
                 </div>
               </p>

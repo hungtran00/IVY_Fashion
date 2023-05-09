@@ -14,6 +14,8 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { useState } from "react";
 const cx = classNames.bind(styles);
 function Cart() {
+  const [radio, setRadio] = useState("");
+  const [name, setName] = useState("");
   const dispatch = useDispatch();
   const handleUpdateCart = (product, action) => {
     sessionStorage.setItem("action", action);
@@ -21,11 +23,23 @@ function Cart() {
   };
 
   const cart = useSelector((state) => state.cart);
-  const [radio, setRadio] = useState("");
-  const [name, setName] = useState("");
+
+  const handleSubmit = (e)=>{
+      e.preventDefault();
+      sessionStorage.setItem("cart", JSON.stringify(cart.cartItem));
+      dispatch(clearCart());
+      e.target.reset();
+      Swal.fire({
+        icon: "success",
+        title: "Check out success...",
+        text: "!",
+      });
+     
+  }
+  
 
   return (
-    <div className={cx("cart")}>
+    <form onSubmit={handleSubmit} className={cx("cart")}>
       <div className={cx("cart__title")}>GIỎ HÀNG</div>
       <div className={cx("cart__container")}>
         <div className={cx("cart__content")}>
@@ -136,11 +150,11 @@ function Cart() {
         <div className={cx("cart__address")}>
           <p>Chọn hình thức giao hàng</p>
           <div className={cx("cart__address_list")}>
-            <input type="radio" onChange={(e) => setRadio(e.target.value)} />
+            <input type="radio" onChange={(e) => setRadio(e.target.value)} required/>
             <span>Nhận hàng tại chi nhánh</span>
           </div>
           <div className={cx("cart__address_list")}>
-            <input type="radio" onChange={(e) => setRadio(e.target.value)} />
+            <input type="radio" onChange={(e) => setRadio(e.target.value)} required/>
             <span>Giao hàng tại địa chỉ người nhận</span>
           </div>
         </div>
@@ -188,7 +202,7 @@ function Cart() {
             </div>
           </div>
           <h3>Ghi chú</h3>
-          <input type="text" placeholder="Lưu ý cho người bán" required />
+          <input type="text" placeholder="Lưu ý cho người bán" required/>
         </div>
 
         <div className={cx("cart__service")}>
@@ -208,32 +222,32 @@ function Cart() {
               .00
             </span>
             <button
-              onClick={() => {
+              // onClick={() => {
                 
 
-                //data set phải là string
-                // thằng cart.cartItem là 1 mảng thế nên để set vào session thì phải chuyển sang string
+              //   //data set phải là string
+              //   // thằng cart.cartItem là 1 mảng thế nên để set vào session thì phải chuyển sang string
 
-                //    localStorage.setItem('dataProduct',JSON.stringify(cart.cartItem))
-                // const dataProduct =   localStorage.getItem('dataProduct')
+              //   //    localStorage.setItem('dataProduct',JSON.stringify(cart.cartItem))
+              //   // const dataProduct =   localStorage.getItem('dataProduct')
 
-                sessionStorage.setItem("cart", JSON.stringify(cart.cartItem));
-                dispatch(clearCart());
-                setRadio("");
-                setName("21");
-                Swal.fire({
-                  icon: "success",
-                  title: "Check out success...",
-                  text: "!",
-                });
-              }}
+              //   setRadio("");
+              //   setName("");
+              //   sessionStorage.setItem("cart", JSON.stringify(cart.cartItem));
+              //   dispatch(clearCart());
+              //   Swal.fire({
+              //     icon: "success",
+              //     title: "Check out success...",
+              //     text: "!",
+              //   });
+              // }}
             >
               ĐẶT HÀNG
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   );
 }
 export default Cart;
