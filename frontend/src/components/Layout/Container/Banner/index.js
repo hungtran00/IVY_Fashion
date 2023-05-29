@@ -15,10 +15,10 @@ function Banner() {
     
     
     const images = [
-        "https://pubcdn.ivymoda.com/files/news/2023/04/11/55836306652720d955e42831d0577809.jpg",
+        "https://pubcdn.ivymoda.com/files/news/2023/05/24/9572a429f14f1b76d6e0c94bbd129837.jpg",
         "https://pubcdn.ivymoda.com/files/news/2023/03/06/dd8cd9fb84343609f1dfb9a5a7c96609.jpg",
-        "https://pubcdn.ivymoda.com/files/news/2023/04/18/4859e07eab26c0374c8c75212095403a.jpg",
-        "https://pubcdn.ivymoda.com/files/news/2023/05/05/278b717f58730b0535d4c154856a28cd.jpg",
+        "https://pubcdn.ivymoda.com/files/news/2023/05/11/35cbc7f406f32b21a8ceee16f41ab9bd.gif",
+        "https://pubcdn.ivymoda.com/files/news/2023/04/11/55836306652720d955e42831d0577809.jpg",
         "https://pubcdn.ivymoda.com/files/news/2023/04/18/4859e07eab26c0374c8c75212095403a.jpg"
         
     ]
@@ -62,7 +62,6 @@ function Banner() {
                 })}
             </div>
             <div className={cx('bannertop__container')}>
-                {/* <button onClick={scrollToProduct} className={cx('bannertop__button')}>SHOP NOW</button> */}
             </div>
             <div className={cx('btnLeft')}>
                 <BsArrowLeft onClick={Prev} />

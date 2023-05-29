@@ -11,11 +11,8 @@ import {
 import { Link, NavLink } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
-import { useState } from "react";
 const cx = classNames.bind(styles);
 function Cart() {
-  const [radio, setRadio] = useState("");
-  const [name, setName] = useState("");
   const dispatch = useDispatch();
   const handleUpdateCart = (product, action) => {
     sessionStorage.setItem("action", action);
@@ -31,7 +28,7 @@ function Cart() {
       e.target.reset();
       Swal.fire({
         icon: "success",
-        title: "Check out success...",
+        title: "Order Success...",
         text: "!",
       });
      
@@ -150,11 +147,11 @@ function Cart() {
         <div className={cx("cart__address")}>
           <p>Chọn hình thức giao hàng</p>
           <div className={cx("cart__address_list")}>
-            <input type="radio" onChange={(e) => setRadio(e.target.value)} required/>
+            <input type="radio" required/>
             <span>Nhận hàng tại chi nhánh</span>
           </div>
           <div className={cx("cart__address_list")}>
-            <input type="radio" onChange={(e) => setRadio(e.target.value)} required/>
+            <input type="radio" required/>
             <span>Giao hàng tại địa chỉ người nhận</span>
           </div>
         </div>
@@ -164,7 +161,7 @@ function Cart() {
             <div className={cx("cart__info_customer_list")}>
               <h2>Tên</h2>
               <input
-                onChange={(e) => setName(e.target.value)}
+                
                 type="text"
                 placeholder="Họ và tên"
                 required
@@ -172,7 +169,7 @@ function Cart() {
             </div>
             <div className={cx("cart__info_customer_list")}>
               <h2>Số điện thoại</h2>
-              <input type="text" placeholder="Số điện thoại" required />
+              <input type="number" placeholder="Số điện thoại" required />
             </div>
           </div>
           <h3>Địa chỉ</h3>

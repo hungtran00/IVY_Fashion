@@ -116,3 +116,18 @@
         }
     }
 }
+// reponsive
+@media (max-width:375px) {
+    .bannertop {
+        &__img {
+            width: 375px;
+            height: 100px;
+            margin: 0px auto 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-bottom-right-radius: 40px;
+            border-top-left-radius: 40px;
+        }
+    }
+}

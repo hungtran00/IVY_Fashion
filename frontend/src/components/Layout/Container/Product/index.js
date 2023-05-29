@@ -31,15 +31,15 @@ function Product() {
                 {
                     product.data.length === 0 ? <Loading /> : product.data.map((item, index) => {
 
-                        const imgSrc1 = `img/product_home/${item.img}`
-                        const imgSrc2 = `img/product_home/1-${item.img}`
+                        const imgSrc1 = `/img/product/${item.img}`
+                        // const imgSrc2 = `/img/product/1-${item.img}` 
                         const path = `/shop/${item._id}`
-                        if (index < 6)
+                        if (index)
                             return (
                                 <div key={item._id} className={cx('product__item')}>
                                     <Link to={path} className={cx('product__img')}>
                                         <img src={imgSrc1} />
-                                        <img className={cx('img__change')} src={imgSrc2} />
+                                        {/* <img className={cx('img__change')} src={imgSrc2} /> */}
                                     </Link>
                                     <div className={cx('product__content')}>
                                         <div className={cx('product__innercontent')}>

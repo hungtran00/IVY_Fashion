@@ -54,7 +54,7 @@ const sizes =
             <div className={cx('products')}>
                 {
 
-                    loop.slice(12,18).map((item, index) => {
+                    loop.slice(9,15).map((item, index) => {
                         const imgUrl = `/img/product/${item.img}`
                         console.log(loop)
                         const path = `/shop/${item._id}`
